@@ -1,0 +1,19 @@
+language: cpp
+
+os:
+  - linux
+
+compiler:
+  - gcc
+  - clang
+
+dist: focal
+
+addons:
+  apt:
+    packages:
+      - cmake
+
+script:
+  - cmake -S . -B _build
+  - cmake --build _build
